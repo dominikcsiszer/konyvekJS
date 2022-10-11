@@ -1,5 +1,4 @@
-import Controller from './controllers/controller.js'
-
+import Controller from '../controllers/controller.js'
 
 $(() => {
     new Controller()

@@ -1,0 +1,18 @@
+{
+    "konyvek": [
+        {
+            "id": 1,
+            "cim": "Pál utcai fiúk",
+            "szerzo": "Molnár Ferenc",
+            "kiado": "Móra kiadó",
+            "ar": 10000
+        },
+        {
+            "id": 2,
+            "cim": "Programozűs rejtelmei",
+            "szerzo": "Nagyon Okos",
+            "kiadó": "Remek kiadó",
+            "ar": 15000
+        }
+    ]
+}

@@ -3,15 +3,46 @@
         {
             "id": 1,
             "cim": "Pál utcai fiúk",
+            "mufaj": "Ifjúsági regény",
             "szerzo": "Molnár Ferenc",
-            "kiado": "Móra kiadó",
+            "kiado": "Ferenc kiadó",
+            "datum": 1906,
             "ar": 10000
         },
         {
             "id": 2,
-            "cim": "Programozűs rejtelmei",
+            "cim": "Programozás rejtelmei",
+            "mufaj": "Tudományos regény",
             "szerzo": "Nagyon Okos",
-            "kiadó": "Remek kiadó",
+            "kiado": "Remek kiadó",
+            "datum": 2006,
+            "ar": 15000
+        },
+        {
+            "id": 3,
+            "cim": "Egri csillagok",
+            "mufaj": "Történelmi regény",
+            "szerzo": "Gárdonyi Géza",
+            "kiado": "Géza kiadó",
+            "datum": 1899,
+            "ar": 15000
+        },
+        {
+            "id": 4,
+            "cim": "Az arany ember",
+            "mufaj": "Társadalmi regény",
+            "szerzo": "Jókai Mór",
+            "kiado": "Mór kiadó",
+            "datum": 1872,
+            "ar": 7990
+        },
+        {
+            "id": 5,
+            "cim": "A Gyűrűk Ura",
+            "mufaj": "Fantasy regény",
+            "szerzo": "J. R. R. Tolkien",
+            "kiado": "Tolkein kiadó",
+            "datum": 1936,
             "ar": 15000
         }
     ]

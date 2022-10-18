@@ -15,7 +15,7 @@ class AdminView {
     }
 
     kattintasTrigger(esemenyNeve) {
-        const esemeny = new CustomEvent(esemenyNeve, {detail: this.#eleme.id, esemenyNeve})
+        const esemeny = new CustomEvent(esemenyNeve, {detail: this.#eleme.id})
         window.dispatchEvent(esemeny)
     }
 }

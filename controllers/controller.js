@@ -2,6 +2,7 @@ import Model from "../models/model.js"
 import EventModel from "../models/eventModel.js"
 
 import View from "../views/View.js"
+import KonyvView from "../views/konyvView.js"
 
 class Controller {
     
@@ -15,12 +16,16 @@ class Controller {
         $(window).on('edit', (e) => {
             new EventModel(e.detail, 'edit')
         })
-    }
 
+        // Könyv view
+    }
+    
     konyvData(data) {
-        
-        let adminView = new View(data, 'tbody', true)
-        let normaliew = new View(data, '.konyvek')
+        new View(data, 'tbody', true)
+        new View(data, '.konyvek')
+        $(window).on('konyv', (e) => {
+            new KonyvView(data, '.konyvek', e.detail)
+        })
     }
 }
 

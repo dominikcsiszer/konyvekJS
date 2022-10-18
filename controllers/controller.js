@@ -5,7 +5,7 @@ class Controller {
     
     constructor() {
         let model = new Model()
-        model.fetchData('../adat.json', this.konyvData)
+        model.fetchData('./adat.json', this.konyvData)
     }
 
     konyvData(data) {

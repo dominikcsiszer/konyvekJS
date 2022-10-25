@@ -31,3 +31,20 @@ Táblázatos formában
 -   listázni
 -   kosárba rakni.
 DIVEK-ben
+
+##### Kosár
+A felhasználó rákattint a kiválasztott termékre - ezzel generál egy új eseményt.
+Publikus felület -> View generálja az eseményt
+- Controller feliratkozik az eseménykezelőre
+- Controller meghívja a modell metódusát
+- Modell pedig kosárba teszi a terméket
+Feladat: Megjeleníteni a kosár adatait.
+Publikus (konyvPulicView) felület - View generálja az eseményt
+Controller feliratkozik az eseménykezelőre
+Modell ami kezeli a kosarat kosarTomb-be teszi
+Kell egy kosár gomb az index.html - megnézzük a kosár tartalmát
+
+Új
+KosarModell : Kosár adatait kozelei
+KosarController : Kapcsolatot létrehoz a KosarModell és a KosarView között
+KosarView - 

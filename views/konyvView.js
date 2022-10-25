@@ -1,13 +1,7 @@
 class KonyvView {
-    #adat
-    #parent
-    #id
     constructor(adat, PARENT, id) {
-        this.#adat = adat
-        this.#parent = $(PARENT)
-        this.#id = id
-        let konyv = this.#adat[this.#id]
-
+        let konyv = adat[id[0]]
+        console.log(konyv);
         $('.container h1').html(`<h1>${konyv.cim}</h1>`)
         let html = `<p class="text-muted">Kiadás dátuma: ${konyv.datum}</p>`
         html += `<div class="row">`
@@ -36,13 +30,12 @@ class KonyvView {
                 html +=`</table>`
                 html += `<h5>Leírás</h5>`
                 html += `<p>${konyv.cim} ${konyv.szerzo} ${konyv.mufaj}e.</p>`
-                html += `<a href="#" class="btn btn-primary"><i class="bi bi-bag-plus"></i> Kosárba</a>`
             html += `</div>`
             html += `<div class="col-md-6">`
             html += `</div>`
             html += `<div class="col-md-4"></div>`
         html += `</div>`
-        this.#parent.html(html)
+        $(PARENT).html(html)
     }
 }
 

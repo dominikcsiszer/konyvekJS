@@ -14,7 +14,7 @@
     <script src="app.js" type="module"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-lg bg-light d-flex">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Könyvek</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,6 +27,25 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="admin.html">Admin</a>
+              </li>
+              <li class="nav-item dropdown justify-content-end" style="width: 500px;">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="bi bi-cart3"></i>
+                </a>
+                <ul class="dropdown-menu p-2">
+                  <li><h6 class="dropdown-header">Kosár tartalma</h6></li>
+                  <li><table class="table table-striped">
+                    <thead>
+                      <th scope="col">Kép</th>
+                      <th scope="col">Cím</th>
+                      <th scope="col">Ár (Ft)</th>
+                    </thead>
+                    <tbody class="kosarTable">
+                    </tbody>
+                    
+                  </table></li>
+                  <li><p class="text-end">Összesen: <span class="kosarOsszAr"></span></p></li>
+                </ul>
               </li>
             </ul>
           </div>

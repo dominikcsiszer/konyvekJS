@@ -1,7 +1,7 @@
 class KonyvView {
     constructor(adat, PARENT, id) {
-        let konyv = adat[id[0]]
-        console.log(konyv);
+        let konyv = adat[id]
+        console.log(adat[id]);
         $('.container h1').html(`<h1>${konyv.cim}</h1>`)
         let html = `<p class="text-muted">Kiadás dátuma: ${konyv.datum}</p>`
         html += `<div class="row">`
@@ -33,7 +33,7 @@ class KonyvView {
             html += `</div>`
             html += `<div class="col-md-6">`
             html += `</div>`
-            html += `<div class="col-md-4"></div>`
+            html += `<div class="col-md-4"><a href="" class="btn btn-primary"><i class="bi bi-arrow-left"></i> Vissza</a></div>`
         html += `</div>`
         $(PARENT).html(html)
     }

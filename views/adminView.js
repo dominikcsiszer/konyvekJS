@@ -11,15 +11,13 @@ class AdminView {
         <td>${element.ar}Ft</td> 
         <td class="text-end"> 
         <div id="allBtn">
-            <a href="#" class="btn btn-light"><i class="bi bi-eye"></i> Megnéz</a> 
-            <a href="#" class="btn btn-light" id="s${element.id}"><i class="bi bi-pencil"></i> Szerkeszt</a> 
-            <a href="#" class="btn btn-danger torol" id="t${element.id}"><i class="bi bi-trash"></i> Töröl</a> </td> </tr>
+            <a href="#" class="btn btn-light allBtn"><i class="bi bi-eye"></i> Megnéz</a> 
+            <a href="#" class="btn btn-light allBtn" id="s${element.id}"><i class="bi bi-pencil"></i> Szerkeszt</a> 
+            <a href="#" class="btn btn-danger torol allBtn" id="t${element.id}"><i class="bi bi-trash"></i> Töröl</a> </td>
+            <a href="#" class="btn btn-success" id="s${element.id}"><i class="bi bi-pencil"></i> Szerkeszt</a>
+            <a href="#" class="btn btn-light"><i class="bi bi-close"></i> Mégsem</a>
         </div>
-        <div id="editBtn" style="display: none;">
-            <a href="#" class="btn btn-light"><i class="bi bi-eye"></i> Megnéz</a>
-            <a href="#" class="btn btn-light" id="s'+element.id+'"><i class="bi bi-pencil"></i> Szerkeszt</a>
-            <a href="#" class="btn btn-danger torol" id="t'+element.id+'"><i class="bi bi-trash"></i> Töröl</a> 
-        </div>`
+        </tr>`
         PARENT.append(html)
 
         $('#t'+element.id).on('click', () => {
@@ -32,12 +30,18 @@ class AdminView {
                     <td><input class="form-control" type="text" value="${element.szerzo}" name="cim" id="cim"></td>
                     <td><input class="form-control" type="text" value="${element.kiado}" name="cim" id="cim"></td>
                     <td><input class="form-control" type="number" value="${element.ar}" name="cim" id="cim"></td>
-                    <td>
-                        <a href="#" class="btn btn-success" id="trS${element.id}"><i class="bi bi-pencil"></i> Szerkeszt</a>
-                        <a href="#" class="btn btn-light" id="trM${element.id}"><i class="bi bi-x"></i> Mégse</a>
-                    </td>`
+                    <td class="text-end"> 
+                    <div id="allBtn">
+                        <a href="#" class="btn btn-light"><i class="bi bi-eye"></i> Megnéz</a> 
+                        <a href="#" class="btn btn-light" id="s${element.id}"><i class="bi bi-pencil"></i> Szerkeszt</a> 
+                        <a href="#" class="btn btn-danger torol" id="t${element.id}"><i class="bi bi-trash"></i> Töröl</a> </td> </tr>
+                    </div>
+                    <div id="editBtn" style="display: none;">
+                        <a href="#" class="btn btn-light" id="s'+element.id+'"><i class="bi bi-pencil"></i> Szerkeszt</a>
+                        <a href="#" class="btn btn-light"><i class="bi bi-close"></i> Mégsem</a>
+                    </div>`
+                    $('#tr'+ element.id).html(html)
             $('#allBtn').css('display', 'none')
-            $('#tr'+ element.id).html(html)
         })
 
         // Eventek

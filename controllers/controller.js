@@ -22,13 +22,14 @@ class Controller {
         const kosarModel = new KosarModel()
         $(window).on('kosar', (e) => {
             kosarModel.setKosar(e.detail.id, e.detail.cim, e.detail.ar)
-            new KosarView(kosarModel.getKosar(), '.kosarTable')
+            new KosarView(kosarModel.getLastItem(), '.kosarTable', kosarModel.getKosar().length)
         })
 
         // Kosár törlés
         $(window).on('kosarTorol', (e) => {
-            kosarModel.deleteKosar(e.detail[0])
-            new KosarView(kosarModel.getKosar(), '.kosarTable')
+            console.log(e)
+            // kosarModel.deleteKosar(e.detail[0])
+            // new KosarView(kosarModel.getKosar(), '.kosarTable')
         })
     }
     
@@ -36,7 +37,7 @@ class Controller {
         new View(data, '.adminTable', true)
         new View(data, '.konyvek')
         $(window).on('konyv', (e) => {
-            new KonyvView(data, '.konyvek', e.detail)
+            new KonyvView(data, '.konyvek', e.detail.id)
         })
     }
 }
